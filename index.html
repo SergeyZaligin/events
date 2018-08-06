@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event</title>
+	<style>
+		header{
+			width: 300px;
+			height: 300px;
+			outline: 1px solid #000;
+		}
+		.modal{
+			width: 150px;
+			height: 150px;
+			outline: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="modal">
+			
+		</div>
+	</header>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<script>
+		$(document).ready(function() {
+			var modal = $('.modal');
+			var head = $('header');
+
+			head.on('click', function () {
+				$('body').addClass('other');
+			});
+			modal.on('click', function () {
+				console.log('click modal')
+			});
+		});
+	</script>
+</body>
+</html>
